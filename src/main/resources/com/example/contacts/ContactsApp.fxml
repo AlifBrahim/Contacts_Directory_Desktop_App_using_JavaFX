@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="1194.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.contacts.ContactsAppController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="18.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="387.0" text="Contacts Directory" />
+               </children>
+            </AnchorPane>
+            <TextField fx:id="searchContactsField" onAction="#searchContact" promptText="Search Contacts" />
+            <HBox prefHeight="0.0" prefWidth="996.0">
+               <children>
+                  <Button fx:id="viewFavouritesButton" mnemonicParsing="false" onAction="#viewFavorites" text="View Favourites" />
+                  <Button mnemonicParsing="false" onAction="#deleteContact" text="Delete Contact" />
+                  <Button fx:id="uploadCSVButton" mnemonicParsing="false" onAction="#uploadCSV" text="Upload CSV file" />
+                  <ComboBox fx:id="sortByComboBox" onAction="#sortBy" prefWidth="150.0" promptText="Sort By" />
+                  <Button fx:id="debug" mnemonicParsing="false" onAction="#debug" text="Debug" />
+               </children>
+            </HBox>
+            <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goBackToMain" text="Go Back" visible="false" />
+         </children>
+      </VBox>
+   </top>
+   <right>
+      <VBox prefHeight="382.0" prefWidth="252.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="300.0">
+               <children>
+                  <Label text="Create Contact" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fx:id="createContactImageView" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="nameField" promptText="Name" />
+            <TextField fx:id="phoneField" prefHeight="25.0" prefWidth="125.0" promptText="Phone Number" />
+            <TextField fx:id="emailField" promptText="Email" />
+            <HBox>
+               <children>
+                  <Button fx:id="createContactButton" mnemonicParsing="false" onAction="#CreateContact" prefHeight="25.0" prefWidth="127.0" text="Create Contact" />
+                  <Button fx:id="uploadCreateContactImageButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" text="Upload Image" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <left>
+      <StackPane prefHeight="387.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableView" prefHeight="387.0" prefWidth="369.0">
+               <columns>
+                  <TableColumn fx:id="nameCol" prefWidth="179.99996948242188" text="Name" />
+                  <TableColumn fx:id="phoneCol" prefWidth="234.66668701171875" text="Phone Number" />
+                  <TableColumn fx:id="emailCol" prefWidth="160.0" text="Email" />
+                  <TableColumn fx:id="favCol" prefWidth="75.0" text="Favourite" />
+               </columns>
+               <contextMenu>
+                  <ContextMenu fx:id="contextMenu">
+                     <items>
+                        <MenuItem fx:id="addToFavouritesContextMenu" mnemonicParsing="false" onAction="#addToFavorites" text="Add To Favourites" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+            <TableView fx:id="favouriteTableView" prefHeight="200.0" prefWidth="200.0" visible="false">
+              <columns>
+                <TableColumn fx:id="nameFavCol" prefWidth="200.0" text="Name" />
+                <TableColumn fx:id="phoneFavCol" prefWidth="200.0" text="Phone Number" />
+                  <TableColumn fx:id="emailFavCol" prefWidth="200.0" text="Email" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="21.0" prefWidth="272.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="79.0" text="Contact Info">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="contactImageView" fitHeight="217.0" fitWidth="254.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="18.0" prefWidth="272.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="37.0" text="Name:" />
+                  <Label fx:id="nameLabel" text="Label" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="19.0" prefWidth="272.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="86.0" text="Phone Number:" />
+                  <Label fx:id="phoneLabel" text="Label" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="19.0" prefWidth="272.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="37.0" text="Email:" />
+                  <Label fx:id="emailLabel" text="Label" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="19.0" prefWidth="272.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="49.0" text="Address" />
+                  <Label fx:id="addressLabel" text="Label" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="19.0" prefWidth="272.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="37.0" text="Note:" />
+                  <Label fx:id="noteLabel" text="Label" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="30.0" prefWidth="272.0">
+               <children>
+                  <Button fx:id="editContactButton" mnemonicParsing="false" onAction="#editContact" text="Edit Contact" />
+                  <Button fx:id="uploadContactImageButton" mnemonicParsing="false" text="Upload Contact Image" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
