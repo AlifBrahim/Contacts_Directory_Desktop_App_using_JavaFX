@@ -2,6 +2,12 @@
 A Contacts Directory Desktop App developed for a data structure assignment. This project uses Linked List structure using Java Collection Framework (JCF) and designed with JavaFX Scene Builder.
 With this app, you can easily add, edit, and remove contacts, as well as upload and remove contact photos.
 
+## GUI
+![alt text](https://github.com/AlifBrahim/Contacts_Directory_Desktop_App_using_JavaFX/blob/master/main%20interface.png)
+![alt text](https://github.com/AlifBrahim/Contacts_Directory_Desktop_App_using_JavaFX/blob/master/Main%20GUI.png)
+![alt text](https://github.com/AlifBrahim/Contacts_Directory_Desktop_App_using_JavaFX/blob/master/Create%20Contact%20GUI.png)
+![alt text](https://github.com/AlifBrahim/Contacts_Directory_Desktop_App_using_JavaFX/blob/master/Edit%20Contact%20GUI.png)
+
 ## Features
 - Add, edit, and remove contacts
 - Upload and remove contact photos
