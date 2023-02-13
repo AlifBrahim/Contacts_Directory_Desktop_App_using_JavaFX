@@ -13,7 +13,8 @@ With this app, you can easily add, edit, and remove contacts, as well as upload 
 - Upload and remove contact photos
 - Sort contacts by name, phone number, email, and recently added
 - Search for contacts by name or phone number
-- Code Overview
+
+## Code Overview
 This project is built with JavaFX and uses FXML files to define the user interface. The main class is MainApp, which extends the Application class and loads the FXML files using the FXMLLoader class.
 
 The application logic is split into several classes, including Contact, ContactsApp, ContactsDirectoryController, CreateContactController, EditContactController, Favourite, and Sorter.
