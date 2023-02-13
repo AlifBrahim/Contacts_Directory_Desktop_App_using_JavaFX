@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="1271.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="501.0" prefWidth="167.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="163.0">
+               <children>
+                  <Pane prefHeight="13.0" prefWidth="163.0" />
+                  <HBox prefHeight="36.0" prefWidth="163.0">
+                     <children>
+                        <Pane prefHeight="39.0" prefWidth="15.0" />
+                        <ImageView fitHeight="39.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@contacts_google_icon.png" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" prefHeight="28.0" prefWidth="92.0">
+                           <children>
+                              <Label text="Contacts">
+                                 <font>
+                                    <Font name="Roboto" size="21.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="15.0" prefWidth="163.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="163.0">
+                     <children>
+                        <Pane prefHeight="53.0" prefWidth="14.0" />
+                        <Button fx:id="createContactButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="Create Contact" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="285.0" prefWidth="127.0">
+                     <children>
+                        <Pane prefHeight="285.0" prefWidth="21.0" />
+                        <VBox prefHeight="285.0" prefWidth="162.0">
+                           <children>
+                              <Pane prefHeight="15.0" prefWidth="133.0" />
+                              <HBox prefHeight="30.0" prefWidth="149.0">
+                                 <children>
+                                    <Button fx:id="viewFavouritesButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="View Favourites" />
+                                    <Button fx:id="backFavouriteButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" text="Back" visible="false" />
+                                 </children>
+                              </HBox>
+                              <Pane prefHeight="6.0" prefWidth="133.0" />
+                              <Button fx:id="deleteContactButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Delete Contact" />
+                              <Pane prefHeight="6.0" prefWidth="133.0" />
+                              <Button fx:id="uploadCSVButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Import CSV">
+                                 <tooltip>
+                                    <Tooltip text="Import CSV with a contiguous column of Name, Phone, Email, Address, Birthday, and Notes starting from Column A in Excel" />
+                                 </tooltip></Button>
+                              <Pane prefHeight="6.0" prefWidth="133.0" />
+                              <Button fx:id="exportCSVButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Export CSV" />
+                              <Pane prefHeight="6.0" prefWidth="133.0" />
+                              <Button fx:id="debugButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Debug" />
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="285.0" prefWidth="25.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="602.0" prefWidth="518.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="629.0" prefWidth="577.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="577.0">
+                     <children>
+                        <Label text="Contact Info">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="79.0" prefWidth="141.0" />
+                        <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                        <VBox alignment="BOTTOM_RIGHT" prefHeight="150.0" prefWidth="43.0">
+                           <children>
+                              <Pane prefHeight="15.0" prefWidth="43.0" />
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="150.0" prefWidth="0.0" />
+                        <VBox alignment="BOTTOM_RIGHT" prefHeight="150.0" prefWidth="55.0">
+                           <children>
+                              <Pane prefHeight="15.0" prefWidth="43.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="577.0">
+                     <children>
+                        <Pane prefHeight="47.0" prefWidth="90.0" />
+                        <Label text="Name:" />
+                        <Pane prefHeight="47.0" prefWidth="10.0" />
+                        <Label fx:id="nameLabel" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="577.0">
+                     <children>
+                        <Pane prefHeight="47.0" prefWidth="90.0" />
+                        <Label text="Phone Number:" />
+                        <Pane prefHeight="47.0" prefWidth="10.0" />
+                        <Label fx:id="phoneLabel" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="577.0">
+                     <children>
+                        <Pane prefHeight="47.0" prefWidth="90.0" />
+                        <Label text="Email:" />
+                        <Pane prefHeight="47.0" prefWidth="10.0" />
+                        <Label fx:id="emailLabel" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="577.0">
+                     <children>
+                        <Pane prefHeight="47.0" prefWidth="90.0" />
+                        <Label text="Address:" />
+                        <Pane prefHeight="47.0" prefWidth="10.0" />
+                        <Label fx:id="addressLabel" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="577.0">
+                     <children>
+                        <Pane prefHeight="47.0" prefWidth="90.0" />
+                        <Label text="Birthday" />
+                        <Pane prefHeight="47.0" prefWidth="10.0" />
+                        <Label fx:id="birthdayLabel" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="577.0">
+                     <children>
+                        <Pane prefHeight="47.0" prefWidth="90.0" />
+                        <Label text="Notes:" />
+                        <Pane prefHeight="47.0" prefWidth="10.0" />
+                        <Label fx:id="notesLabel" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="21.0" prefWidth="577.0">
+                     <children>
+                        <Button fx:id="editButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Edit" />
+                        <Pane prefHeight="25.0" prefWidth="29.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="610.0" prefWidth="525.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="379.0">
+                     <children>
+                        <Pane prefHeight="37.0" prefWidth="54.0" />
+                        <TextField fx:id="searchField" prefHeight="25.0" prefWidth="378.0" promptText="Search Contact" />
+                        <Pane prefHeight="37.0" prefWidth="50.0" />
+                        <ComboBox fx:id="sortByComboBox" prefWidth="150.0" promptText="Sort By" />
+                        <Pane prefHeight="37.0" prefWidth="59.0" />
+                     </children>
+                  </HBox>
+                  <StackPane prefHeight="523.0" prefWidth="493.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="567.0" prefWidth="520.0">
+                           <columns>
+                              <TableColumn fx:id="nameCol" prefWidth="159.0" text="Name" />
+                              <TableColumn fx:id="emailCol" prefWidth="159.0" text="Email" />
+                              <TableColumn fx:id="phoneCol" prefWidth="159.0" text="Phone Number" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu fx:id="tableContextMenu">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Add To Favourites" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                        <TableView fx:id="tableFavView" prefHeight="569.0" prefWidth="519.0" visible="false">
+                           <columns>
+                              <TableColumn fx:id="nameFavCol" prefWidth="159.0" text="Name" />
+                              <TableColumn fx:id="emailFavCol" prefWidth="159.0" text="Email" />
+                              <TableColumn fx:id="phoneFavCol" prefWidth="159.0" text="Phone Number" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
